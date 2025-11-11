@@ -1,0 +1,140 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\RestaurantManager_Project\\RestaurantManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|d:\\restaurantmanager_project\\restaurantmanager\\forms\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|solutionrelative:forms\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|d:\\restaurantmanager_project\\restaurantmanager\\utils\\constant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|solutionrelative:utils\\constant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|d:\\restaurantmanager_project\\restaurantmanager\\utils\\fileutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|solutionrelative:utils\\fileutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|d:\\restaurantmanager_project\\restaurantmanager\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|d:\\restaurantmanager_project\\restaurantmanager\\models\\productcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|solutionrelative:models\\productcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|D:\\RestaurantManager_Project\\RestaurantManager\\forms\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|solutionrelative:forms\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|d:\\restaurantmanager_project\\restaurantmanager\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF277B3-958C-4955-AEDD-A3D349D7C6BA}|RestaurantManager.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Constant.cs",
+              "DocumentMoniker": "D:\\RestaurantManager_Project\\RestaurantManager\\Utils\\Constant.cs",
+              "RelativeDocumentMoniker": "Utils\\Constant.cs",
+              "ToolTip": "D:\\RestaurantManager_Project\\RestaurantManager\\Utils\\Constant.cs",
+              "RelativeToolTip": "Utils\\Constant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T15:25:52.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileUtils.cs",
+              "DocumentMoniker": "D:\\RestaurantManager_Project\\RestaurantManager\\Utils\\FileUtils.cs",
+              "RelativeDocumentMoniker": "Utils\\FileUtils.cs",
+              "ToolTip": "D:\\RestaurantManager_Project\\RestaurantManager\\Utils\\FileUtils.cs",
+              "RelativeToolTip": "Utils\\FileUtils.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAYwBwAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T14:31:51.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SignInForm.cs",
+              "DocumentMoniker": "D:\\RestaurantManager_Project\\RestaurantManager\\Forms\\SignInForm.cs",
+              "RelativeDocumentMoniker": "Forms\\SignInForm.cs",
+              "ToolTip": "D:\\RestaurantManager_Project\\RestaurantManager\\Forms\\SignInForm.cs",
+              "RelativeToolTip": "Forms\\SignInForm.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAD8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T14:13:16.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SignInForm.cs [Design]",
+              "DocumentMoniker": "D:\\RestaurantManager_Project\\RestaurantManager\\Forms\\SignInForm.cs",
+              "RelativeDocumentMoniker": "Forms\\SignInForm.cs",
+              "ToolTip": "D:\\RestaurantManager_Project\\RestaurantManager\\Forms\\SignInForm.cs [Design]",
+              "RelativeToolTip": "Forms\\SignInForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T14:10:53.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductCategory.cs",
+              "DocumentMoniker": "D:\\RestaurantManager_Project\\RestaurantManager\\Models\\ProductCategory.cs",
+              "RelativeDocumentMoniker": "Models\\ProductCategory.cs",
+              "ToolTip": "D:\\RestaurantManager_Project\\RestaurantManager\\Models\\ProductCategory.cs",
+              "RelativeToolTip": "Models\\ProductCategory.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T13:57:00.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\RestaurantManager_Project\\RestaurantManager\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "D:\\RestaurantManager_Project\\RestaurantManager\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T13:54:57.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\RestaurantManager_Project\\RestaurantManager\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\RestaurantManager_Project\\RestaurantManager\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAwwDQAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T13:37:10.613Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

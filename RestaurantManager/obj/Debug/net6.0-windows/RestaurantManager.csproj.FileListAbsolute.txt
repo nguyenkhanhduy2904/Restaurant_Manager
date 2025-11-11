@@ -1,0 +1,16 @@
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.SignInForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.csproj.GenerateResource.cache
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.AssemblyInfoInputs.cache
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.AssemblyInfo.cs
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.csproj.CoreCompileInputs.cache
+D:\RestaurantManager_Project\RestaurantManager\bin\Debug\net6.0-windows\RestaurantManager.exe
+D:\RestaurantManager_Project\RestaurantManager\bin\Debug\net6.0-windows\RestaurantManager.deps.json
+D:\RestaurantManager_Project\RestaurantManager\bin\Debug\net6.0-windows\RestaurantManager.runtimeconfig.json
+D:\RestaurantManager_Project\RestaurantManager\bin\Debug\net6.0-windows\RestaurantManager.dll
+D:\RestaurantManager_Project\RestaurantManager\bin\Debug\net6.0-windows\RestaurantManager.pdb
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.dll
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\refint\RestaurantManager.dll
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.pdb
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.genruntimeconfig.cache
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\ref\RestaurantManager.dll
