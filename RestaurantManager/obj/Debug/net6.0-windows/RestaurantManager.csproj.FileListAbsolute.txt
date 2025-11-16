@@ -14,3 +14,16 @@ D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\refint\R
 D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.pdb
 D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.genruntimeconfig.cache
 D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\ref\RestaurantManager.dll
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.sourcelink.json
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.AdminForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.StaffForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.ManageUsersForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.EditUserForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.EditCategoriesForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.ManageCategoriesForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.EditProductForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.ManageProductsForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.EditTableTypeForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.ManageTableTypeForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.EditTablesForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.ManageTablesForm.resources

@@ -19,6 +19,7 @@ namespace RestaurantManager.Forms
         {
             InitializeComponent();
            
+           
         }
 
 
@@ -56,6 +57,24 @@ namespace RestaurantManager.Forms
                     //this.DialogResult = DialogResult.OK;
                     //this.Tag = user; // Pass the logged-in user back to the caller
                     //this.Close();
+
+                    if (user.Role == UserRole.Admin)
+                    {
+                        AdminForm adminForm = new AdminForm(user,this);
+                        adminForm.Show();
+                        
+
+                    }
+                    else if (user.Role == UserRole.Staff) 
+                    {
+                        StaffForm staffForm = new StaffForm(user);
+                        staffForm.Show();
+                        
+
+                    }
+                    txtBxUserName.Text = "";
+                    txtBxPassword.Text = "";// clear input fields
+                    this.Hide();
                     return;
                 }
                 

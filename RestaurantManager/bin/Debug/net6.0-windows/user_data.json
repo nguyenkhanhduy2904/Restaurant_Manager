@@ -2,14 +2,19 @@
   {
     "UserID": "ADM001",
     "UserName": "Admin1",
-    "Password": "1234",
+    "Password": "1234567",
     "Role": 0
   },
   {
     "UserID": "STF001",
     "UserName": "John Marston",
-    "Password": "1",
+    "Password": "1234",
+    "Role": 0
+  },
+  {
+    "UserID": "0003",
+    "UserName": "Duy",
+    "Password": "29042004",
     "Role": 1
   }
-  
 ]

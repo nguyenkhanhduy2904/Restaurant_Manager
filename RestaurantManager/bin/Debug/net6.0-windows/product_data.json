@@ -1,0 +1,22 @@
+[
+  {
+    "ProductID": "00001",
+    "ProductName": "Milo",
+    "Price": 40000,
+    "Category": {
+      "CategoryID": "0000",
+      "CategoryName": "Uncategorized"
+    },
+    "IsAvailable": false
+  },
+  {
+    "ProductID": "0001",
+    "ProductName": "333",
+    "Price": 36000,
+    "Category": {
+      "CategoryID": "0003",
+      "CategoryName": "Alcohol"
+    },
+    "IsAvailable": true
+  }
+]

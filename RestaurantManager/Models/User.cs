@@ -45,17 +45,56 @@ namespace RestaurantManager.Models
 
     }
 
+    ///===================================================================================================///
+
     public static class UserList
     {
-        public static List<User> Users { get; set; } = FileUtils.LoadFromJson<List<User>>(Constant.USER_DATA_FILE) ?? InitializeDefaultUsersList() ;
+        public static List<User> Users { get; set; } = new List<User>();
+
+
 
 
         private static List<User> InitializeDefaultUsersList()
         {
-            var defaultList = new List<User> { new User("ADM001", "Admin1", "1234", UserRole.Admin) };
+            var defaultList = new List<User> { new User("ADM001", Constant.DEFAULT_ADMIN_USERNAME.ToString(), Constant.DEFAULT_PASSWORD.ToString(), UserRole.Admin) };
             FileUtils.SaveToJson(Constant.USER_DATA_FILE, defaultList);
 
             return defaultList;
+        }
+
+
+        public static bool InitUserListData()
+        {
+            try
+            {
+                if (!File.Exists(Constant.USER_DATA_FILE))
+                {
+                    // First run: create default user
+                    Users = InitializeDefaultUsersList();
+                    return true;
+                }
+
+                // Try to load existing file
+                Users = FileUtils.LoadFromJson<List<User>>(Constant.USER_DATA_FILE);
+
+                // Handle empty or invalid file
+                if (Users == null || Users.Count == 0)
+                {
+                    Users = InitializeDefaultUsersList();
+                    return true; // treated as first run or recovery
+                }
+
+                return false; // loaded successfully
+            }
+            catch (Exception ex)
+            {
+                // Corrupted file: show warning and recreate default list
+                MessageBox.Show($"Failed to load user data: {ex.Message}\nA default admin user will be created.",
+                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                Users = InitializeDefaultUsersList();
+                return true;
+            }
         }
 
         public static User GetUserByID(string userID)

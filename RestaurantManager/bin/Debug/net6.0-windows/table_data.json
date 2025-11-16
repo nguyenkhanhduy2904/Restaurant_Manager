@@ -1,0 +1,52 @@
+[
+  {
+    "TableID": 36,
+    "TableName": "36",
+    "TableType": {
+      "TypeID": "0000",
+      "TypeName": "Default Type"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 37,
+    "TableName": "37",
+    "TableType": {
+      "TypeID": "0000",
+      "TypeName": "Default Type"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 38,
+    "TableName": "38",
+    "TableType": {
+      "TypeID": "000121",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 39,
+    "TableName": "39",
+    "TableType": {
+      "TypeID": "000121",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 40,
+    "TableName": "40",
+    "TableType": {
+      "TypeID": "000121",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  }
+]

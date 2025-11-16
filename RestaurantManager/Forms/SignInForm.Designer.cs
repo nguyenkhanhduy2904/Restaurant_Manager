@@ -33,6 +33,7 @@
             txtBxUserName = new TextBox();
             txtBxPassword = new TextBox();
             btnSignIn = new Button();
+            btnForgotPassword = new Button();
             SuspendLayout();
             // 
             // label1
@@ -66,10 +67,11 @@
             txtBxPassword.Name = "txtBxPassword";
             txtBxPassword.Size = new Size(372, 31);
             txtBxPassword.TabIndex = 3;
+            txtBxPassword.UseSystemPasswordChar = true;
             // 
             // btnSignIn
             // 
-            btnSignIn.Location = new Point(486, 186);
+            btnSignIn.Location = new Point(314, 190);
             btnSignIn.Name = "btnSignIn";
             btnSignIn.Size = new Size(112, 34);
             btnSignIn.TabIndex = 4;
@@ -77,11 +79,21 @@
             btnSignIn.UseVisualStyleBackColor = true;
             btnSignIn.Click += btnSignIn_Click;
             // 
+            // btnForgotPassword
+            // 
+            btnForgotPassword.Location = new Point(434, 190);
+            btnForgotPassword.Name = "btnForgotPassword";
+            btnForgotPassword.Size = new Size(164, 34);
+            btnForgotPassword.TabIndex = 5;
+            btnForgotPassword.Text = "Forgot Password";
+            btnForgotPassword.UseVisualStyleBackColor = true;
+            // 
             // SignInForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1111, 621);
+            Controls.Add(btnForgotPassword);
             Controls.Add(btnSignIn);
             Controls.Add(txtBxPassword);
             Controls.Add(txtBxUserName);
@@ -100,5 +112,6 @@
         private TextBox txtBxUserName;
         private TextBox txtBxPassword;
         private Button btnSignIn;
+        private Button btnForgotPassword;
     }
 }
