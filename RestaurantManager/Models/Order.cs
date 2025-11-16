@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManager.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,5 +32,134 @@ namespace RestaurantManager.Models
             this.isPaid = isPaid;
             this.orderedByUserID = orderedByUserID;
         }
+    }
+
+
+    public static class OrderList
+    {
+        public static List<Order> Orders { get; set; } = new List<Order>();
+
+        public static List<Order> InitDefaultOrderList()
+        {
+            Orders = new List<Order>();
+            FileUtils.SaveToJson(Constant.ORDER_DATA_FILE, Orders);
+            return Orders;
+        }
+
+        public static Order CreateNextOrder(int tbID, string userID)
+        {
+            int orderID = IDStorage.GetNextOrderID();
+            DateTime createAt = DateTime.Now;
+            return new Order(orderID, tbID, createAt, null, false, userID);
+        }
+
+
+        public static bool InitDataList()
+        {
+            try 
+            {
+                if (!File.Exists(Constant.ORDER_DATA_FILE))
+                {
+                    Orders = InitDefaultOrderList();
+                    return false;
+
+                }
+                Orders = FileUtils.LoadFromJson<List<Order>>(Constant.ORDER_DATA_FILE);
+                if (Orders == null || Orders.Count == 0)
+                {
+                    Orders = InitDefaultOrderList();
+                    return false;
+
+                }
+                return true;
+            }
+            catch(Exception e) 
+            {
+                MessageBox.Show($"There an error loading Order list. \nA default list will be create.\n {e.Message}", "Error", MessageBoxButtons.OK);
+                Orders = InitDefaultOrderList();
+                return false;
+            
+            }
+
+
+            
+        }
+
+        public static Order GetOrderByID(int id)
+        {
+            foreach (var order in Orders)
+            {
+                if (order.OrderID == id)
+                {
+                    return order;
+                }
+
+            }
+            return null;
+
+        }
+
+
+        public static bool AddOrder(Order order)
+        {
+            try 
+            {
+                Orders.Add(order);
+                FileUtils.SaveToJson(Constant.ORDER_DATA_FILE, Orders);
+                return true;
+
+            
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show($"Error adding order: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            
+            }
+
+        }
+
+        public static bool DeleteOrder(Order order)
+        {
+            try 
+            {
+                Orders.Remove(order);
+                FileUtils.SaveToJson(Constant.ORDER_DATA_FILE, Orders);
+                return true;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error delete order: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public static bool UpdateOrder(Order order)
+        {
+            try
+            {
+                var existedOrder = GetOrderByID(order.OrderID);
+                if (existedOrder != null)
+                {
+                   
+                    existedOrder.TableID= order.TableID;
+                    existedOrder.IsPaid = order.IsPaid;
+                    existedOrder.Items= order.Items;
+                    FileUtils.SaveToJson(Constant.ORDER_DATA_FILE,Orders); 
+                    return true;
+                }
+                return false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error update order: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+
     }
 }

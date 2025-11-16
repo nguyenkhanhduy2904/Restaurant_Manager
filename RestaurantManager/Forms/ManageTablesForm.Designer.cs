@@ -30,6 +30,9 @@
         {
             flpTables = new FlowLayoutPanel();
             btnCreate = new Button();
+            btnReturn = new Button();
+            btnDelete = new Button();
+            btnEdit = new Button();
             SuspendLayout();
             // 
             // flpTables
@@ -43,7 +46,7 @@
             // 
             // btnCreate
             // 
-            btnCreate.Location = new Point(848, 12);
+            btnCreate.Location = new Point(695, 63);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new Size(154, 34);
             btnCreate.TabIndex = 0;
@@ -51,15 +54,48 @@
             btnCreate.UseVisualStyleBackColor = true;
             btnCreate.Click += btnCreate_Click;
             // 
+            // btnReturn
+            // 
+            btnReturn.Location = new Point(34, 63);
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(112, 34);
+            btnReturn.TabIndex = 1;
+            btnReturn.Text = "Return";
+            btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.Click += btnReturn_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(892, 63);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(112, 34);
+            btnDelete.TabIndex = 2;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnEdit
+            // 
+            btnEdit.Location = new Point(1034, 63);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(112, 34);
+            btnEdit.TabIndex = 3;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = true;
+            // 
             // ManageTablesForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1314, 602);
+            Controls.Add(btnEdit);
+            Controls.Add(btnDelete);
+            Controls.Add(btnReturn);
             Controls.Add(btnCreate);
             Controls.Add(flpTables);
             Name = "ManageTablesForm";
             Text = "ManageTablesForm";
+            Activated += ManageTablesForm_Activated;
             ResumeLayout(false);
         }
 
@@ -67,5 +103,8 @@
 
         private FlowLayoutPanel flpTables;
         private Button btnCreate;
+        private Button btnReturn;
+        private Button btnDelete;
+        private Button btnEdit;
     }
 }

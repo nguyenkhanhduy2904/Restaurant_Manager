@@ -1,47 +1,51 @@
 ﻿using RestaurantManager.Utils;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace RestaurantManager.Models
 {
-    public static class TableIDStorage
+    public class IDStorageData
     {
-        private static string filePath = Constant.TABLE_NEXT_ID_FILE;
+        public int NextTableID { get; set; } = 1;
+        public int NextOrderID { get; set; } = 1;
+        // add more later if needed
+    }
 
-        public static int NextTableID { get; private set; } = 1;
+    public static class IDStorage
+    {
+        private static readonly string filePath = Constant.TABLE_NEXT_ID_FILE;
+        private static IDStorageData data = new IDStorageData();
 
-        // Load from file
         public static void Load()
         {
             if (File.Exists(filePath))
             {
-                NextTableID = FileUtils.LoadFromJson<int>(filePath);
+                data = FileUtils.LoadFromJson<IDStorageData>(filePath) ?? new IDStorageData();
             }
             else
             {
-                NextTableID = 1;
-                Save(); // create file
+                data = new IDStorageData();
+                Save();
             }
         }
 
-        // Save current value
         public static void Save()
         {
-            FileUtils.SaveToJson(filePath, NextTableID);
+            FileUtils.SaveToJson(filePath, data);
         }
 
-        // Get next ID and increment
-        public static int GetNextID()
+        public static int GetNextTableID()
         {
-            int id = NextTableID;
-            NextTableID++;
+            int id = data.NextTableID++;
             Save();
             return id;
         }
 
-
+        public static int GetNextOrderID()
+        {
+            int id = data.NextOrderID++;
+            Save();
+            return id;
+        }
     }
 }

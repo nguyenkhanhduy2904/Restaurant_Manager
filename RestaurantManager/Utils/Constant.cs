@@ -20,6 +20,8 @@ namespace RestaurantManager.Utils
         public const string TABLE_TYPE_DEFAULT_ID = "0000";
         public const string TABLE_TYPE_DEFAULT_NAME = "Default Type";
         public const string TABLE_NEXT_ID_FILE = "table_next_id.json";
+        public const string ORDER_DATA_FILE = "order_data_file.json";
+
 
         //public const string CONFIG_DATA_FILE = "config_data.json";
 

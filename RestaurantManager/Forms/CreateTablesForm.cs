@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace RestaurantManager.Forms
 {
-    public partial class EditTablesForm : Form
+    public partial class CreateTablesForm : Form
     {
         private User currentUser;
         private Form previousForm;
         private Table choosedTable;
-        public EditTablesForm(User currentUser, Form previousForm, Table choosedTable)
+        public CreateTablesForm(User currentUser, Form previousForm, Table choosedTable)
         {
             InitializeComponent();
             this.currentUser = currentUser;
@@ -58,15 +58,15 @@ namespace RestaurantManager.Forms
                 return;
             }
             TableType tbType = cbxType.SelectedItem as TableType;
-            if(tbType == null)
+            if (tbType == null)
             {
                 MessageBox.Show("Please choose a type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (choosedTable ==null)
+            if (choosedTable == null)
             {
-                for (int i =0; i< amount; i++)
+                for (int i = 0; i < amount; i++)
                 {
                     TableList.AddTable(TableList.CreateNextTable(tbType));
                 }
@@ -77,6 +77,11 @@ namespace RestaurantManager.Forms
                     this.Close();
                 }
             }
+
+        }
+
+        private void CreateTablesForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

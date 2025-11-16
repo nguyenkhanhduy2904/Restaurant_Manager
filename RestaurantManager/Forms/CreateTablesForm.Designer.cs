@@ -1,6 +1,6 @@
 ﻿namespace RestaurantManager.Forms
 {
-    partial class EditTablesForm
+    partial class CreateTablesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -89,7 +89,7 @@
             btnReturn.UseVisualStyleBackColor = true;
             btnReturn.Click += btnReturn_Click;
             // 
-            // EditTablesForm
+            // CreateTablesForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -100,8 +100,9 @@
             Controls.Add(txtBxAmount);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "EditTablesForm";
+            Name = "CreateTablesForm";
             Text = "EditTablesForm";
+            Load += CreateTablesForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

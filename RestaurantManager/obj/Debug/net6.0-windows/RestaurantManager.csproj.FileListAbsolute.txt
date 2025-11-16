@@ -25,5 +25,6 @@ D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\Restaura
 D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.ManageProductsForm.resources
 D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.EditTableTypeForm.resources
 D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.ManageTableTypeForm.resources
-D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.EditTablesForm.resources
 D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.ManageTablesForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.CreateTablesForm.resources
+D:\RestaurantManager_Project\RestaurantManager\obj\Debug\net6.0-windows\RestaurantManager.Forms.EditTableForm.resources

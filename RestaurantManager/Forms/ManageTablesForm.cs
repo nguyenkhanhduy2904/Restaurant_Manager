@@ -15,11 +15,14 @@ namespace RestaurantManager.Forms
     {
         private User currentUser;
         private Form previousForm;
+        private Table selectedTable;
+        private Button lastSelectedButton;
         public ManageTablesForm(User currentUser, Form previousForm)
         {
             InitializeComponent();
             this.currentUser = currentUser;
             this.previousForm = previousForm;
+            LoadTableButtons();
         }
 
         private void LoadTableButtons()
@@ -35,6 +38,9 @@ namespace RestaurantManager.Forms
                 btn.BackColor = table.IsOccupied ? Color.Red : Color.Green;
                 btn.Tag = table; // store the table object
                 btn.Click += TableButton_Click; // event handler
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.Black;
 
                 flpTables.Controls.Add(btn);
             }
@@ -47,16 +53,66 @@ namespace RestaurantManager.Forms
 
             if (table != null)
             {
-                MessageBox.Show($"Table {table.TableName} clicked. Occupied? {table.IsOccupied}");
-                // Here you can open the order form or update table status
+                //MessageBox.Show($"Table {table.TableName} clicked. Occupied? {table.IsOccupied}");
+                //// Here you can open the order form or update table status
+                ///
+                selectedTable = table;
+
+
+                if (lastSelectedButton != null)
+                {
+                    Table previousTable = lastSelectedButton.Tag as Table;
+                    lastSelectedButton.FlatAppearance.BorderSize = 0;
+                    //lastSelectedButton.FlatAppearance.BorderColor = Color.Green;
+                }
+                btn.FlatAppearance.BorderSize = 3;
+                btn.FlatAppearance.BorderColor = Color.Black;
+                lastSelectedButton = btn;
+
             }
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            EditTablesForm editTablesForm = new EditTablesForm(currentUser, this, null);
+            CreateTablesForm editTablesForm = new CreateTablesForm(currentUser, this, null);
             editTablesForm.Show();
             this.Hide();
+        }
+
+        private void ManageTablesForm_Activated(object sender, EventArgs e)
+        {
+            LoadTableButtons();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (selectedTable == null)
+            {
+                MessageBox.Show("No table selected, please choose a table","Error", MessageBoxButtons.OK);
+                return;
+
+            }
+            if (selectedTable.IsOccupied)
+            {
+                MessageBox.Show("This table are currently been ocupied. Cannot delete","Error", MessageBoxButtons.OK);
+                return;
+
+            }
+            if (TableList.DeleteTable(selectedTable))
+            {
+                MessageBox.Show("Successfully delete this table", "Info", MessageBoxButtons.OK);
+                selectedTable = null;
+                lastSelectedButton = null;
+                LoadTableButtons(); // refresh the buttons
+                return;
+            }
+            
         }
     }
 }

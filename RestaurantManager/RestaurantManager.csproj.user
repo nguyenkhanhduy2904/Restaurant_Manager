@@ -10,7 +10,10 @@
     <Compile Update="Forms\EditProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\EditTablesForm.cs">
+    <Compile Update="Forms\CreateTablesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\EditTableForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\EditTableTypeForm.cs">

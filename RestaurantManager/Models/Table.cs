@@ -42,7 +42,7 @@ namespace RestaurantManager.Models
 
         public static Table CreateNextTable(TableType? tableType)
         {
-            int nextID = TableIDStorage.GetNextID();
+            int nextID = IDStorage.GetNextTableID();
             if (tableType == null)
             {
                 return new Table(nextID, null, TableTypeList.TableTypes[0], false, null);
@@ -131,7 +131,7 @@ namespace RestaurantManager.Models
             }
         }
 
-        public static void UpdateTable(Table table)
+        public static bool UpdateTable(Table table)
         {
             try
             {
@@ -143,11 +143,14 @@ namespace RestaurantManager.Models
                     existingTable.IsOccupied = table.IsOccupied;
                     existingTable.CurrentOrderID = table.CurrentOrderID;
                     FileUtils.SaveToJson(Constant.TABLE_DATA_FILE, Tables);
+                    return true;
                 }
+                return false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error updating table: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
         }
