@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RestaurantManager.Models;
+using RestaurantManager.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RestaurantManager.Models;
 namespace RestaurantManager.Forms
 {
     public partial class EditProductForm : Form
@@ -24,6 +25,16 @@ namespace RestaurantManager.Forms
             this.currentUser = currentUser;
             this.previousForm = previousForm;
             SetupData();
+
+            //this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //this.MaximizeBox = false;
+            //this.MinimizeBox = false;
+            //this.StartPosition = FormStartPosition.CenterScreen;
+
+            //// Optional fixed size:
+            //this.Size = new Size(1366, 768);
+
+            Helper.SetFixedFormSize(this, Constant.BIG_WINDOW_WIDTH, Constant.BIG_WINDOW_HEIGHT);
         }
 
         void SetupData()
@@ -37,7 +48,9 @@ namespace RestaurantManager.Forms
                 txtBxPrice.Text = choosedProduct.Price.ToString();
                 cbxCategory.DataSource = ProductCategoryList.Categories;
                 cbxCategory.DisplayMember = "CategoryName";
-                cbxCategory.SelectedItem = choosedProduct.Category;
+                cbxCategory.ValueMember = "CategoryID";
+
+                cbxCategory.SelectedValue = choosedProduct.Category.CategoryID;
                 radTrue.Checked = choosedProduct.IsAvailable;
                 radFalse.Checked = !choosedProduct.IsAvailable;
             }
@@ -69,9 +82,9 @@ namespace RestaurantManager.Forms
                 return;
             }
             bool isAvailable = radTrue.Checked;
-           
 
-            if (choosedProduct== null)
+
+            if (choosedProduct == null)
             {
 
                 Product newProduct = new Product(
@@ -91,6 +104,27 @@ namespace RestaurantManager.Forms
                     }
                 }
             }
+            else
+            {
+                choosedProduct.ProductName = txtBxName.Text;
+                choosedProduct.Price = price;
+                choosedProduct.Category = selectedCategory;
+                choosedProduct.IsAvailable = isAvailable;
+                ProductList.UpdateProduct(choosedProduct);
+                DialogResult result = MessageBox.Show("Product information updated successfully! Do you want to return?", "Success", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    previousForm.Show();
+                    this.Close();
+                }
+            }
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            previousForm.Show();
+            this.Close();
+
         }
     }
 }

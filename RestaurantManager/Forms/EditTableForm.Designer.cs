@@ -30,12 +30,12 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtBxID = new TextBox();
+            txtName = new TextBox();
             groupBox1 = new GroupBox();
-            label3 = new Label();
-            radTrue = new RadioButton();
             radFalse = new RadioButton();
+            radTrue = new RadioButton();
+            label3 = new Label();
             dgvOrder = new DataGridView();
             label4 = new Label();
             txtBxOrderID = new TextBox();
@@ -43,6 +43,11 @@
             lbTimeCreate = new Label();
             label6 = new Label();
             lbCreateByUser = new Label();
+            flpProdCategory = new FlowLayoutPanel();
+            flpProd = new FlowLayoutPanel();
+            btnReturn = new Button();
+            btnSave = new Button();
+            btnEdit = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvOrder).BeginInit();
             SuspendLayout();
@@ -50,7 +55,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(61, 130);
+            label1.Location = new Point(810, 59);
             label1.Name = "label1";
             label1.Size = new Size(108, 25);
             label1.TabIndex = 0;
@@ -59,49 +64,51 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(61, 69);
+            label2.Location = new Point(810, 9);
             label2.Name = "label2";
             label2.Size = new Size(34, 25);
             label2.TabIndex = 1;
             label2.Text = "ID:";
             // 
-            // textBox1
+            // txtBxID
             // 
-            textBox1.Location = new Point(182, 69);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 31);
-            textBox1.TabIndex = 2;
+            txtBxID.Location = new Point(912, 9);
+            txtBxID.Name = "txtBxID";
+            txtBxID.Size = new Size(150, 31);
+            txtBxID.TabIndex = 2;
             // 
-            // textBox2
+            // txtName
             // 
-            textBox2.Location = new Point(182, 124);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(150, 31);
-            textBox2.TabIndex = 3;
+            txtName.Location = new Point(912, 59);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(150, 31);
+            txtName.TabIndex = 3;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(radFalse);
             groupBox1.Controls.Add(radTrue);
-            groupBox1.Location = new Point(182, 198);
+            groupBox1.Location = new Point(1157, 59);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(236, 150);
+            groupBox1.Size = new Size(161, 60);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             // 
-            // label3
+            // radFalse
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(61, 217);
-            label3.Name = "label3";
-            label3.Size = new Size(101, 25);
-            label3.TabIndex = 5;
-            label3.Text = "Is Ocupied:";
+            radFalse.AutoSize = true;
+            radFalse.Location = new Point(81, 17);
+            radFalse.Name = "radFalse";
+            radFalse.Size = new Size(75, 29);
+            radFalse.TabIndex = 1;
+            radFalse.TabStop = true;
+            radFalse.Text = "False";
+            radFalse.UseVisualStyleBackColor = true;
             // 
             // radTrue
             // 
             radTrue.AutoSize = true;
-            radTrue.Location = new Point(19, 47);
+            radTrue.Location = new Point(6, 17);
             radTrue.Name = "radTrue";
             radTrue.Size = new Size(69, 29);
             radTrue.TabIndex = 0;
@@ -109,16 +116,14 @@
             radTrue.Text = "True";
             radTrue.UseVisualStyleBackColor = true;
             // 
-            // radFalse
+            // label3
             // 
-            radFalse.AutoSize = true;
-            radFalse.Location = new Point(133, 47);
-            radFalse.Name = "radFalse";
-            radFalse.Size = new Size(75, 29);
-            radFalse.TabIndex = 1;
-            radFalse.TabStop = true;
-            radFalse.Text = "False";
-            radFalse.UseVisualStyleBackColor = true;
+            label3.AutoSize = true;
+            label3.Location = new Point(1157, 31);
+            label3.Name = "label3";
+            label3.Size = new Size(101, 25);
+            label3.TabIndex = 5;
+            label3.Text = "Is Ocupied:";
             // 
             // dgvOrder
             // 
@@ -129,13 +134,13 @@
             dgvOrder.Name = "dgvOrder";
             dgvOrder.RowHeadersWidth = 62;
             dgvOrder.RowTemplate.Height = 33;
-            dgvOrder.Size = new Size(360, 225);
+            dgvOrder.Size = new Size(360, 469);
             dgvOrder.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(810, 45);
+            label4.Location = new Point(810, 124);
             label4.Name = "label4";
             label4.Size = new Size(80, 25);
             label4.TabIndex = 7;
@@ -144,7 +149,7 @@
             // txtBxOrderID
             // 
             txtBxOrderID.Enabled = false;
-            txtBxOrderID.Location = new Point(927, 45);
+            txtBxOrderID.Location = new Point(912, 118);
             txtBxOrderID.Name = "txtBxOrderID";
             txtBxOrderID.Size = new Size(150, 31);
             txtBxOrderID.TabIndex = 8;
@@ -152,7 +157,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(61, 474);
+            label5.Location = new Point(1190, 155);
             label5.Name = "label5";
             label5.Size = new Size(109, 25);
             label5.TabIndex = 9;
@@ -161,7 +166,7 @@
             // lbTimeCreate
             // 
             lbTimeCreate.AutoSize = true;
-            lbTimeCreate.Location = new Point(201, 474);
+            lbTimeCreate.Location = new Point(1207, 195);
             lbTimeCreate.Name = "lbTimeCreate";
             lbTimeCreate.Size = new Size(71, 25);
             lbTimeCreate.TabIndex = 10;
@@ -170,7 +175,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(61, 543);
+            label6.Location = new Point(1190, 232);
             label6.Name = "label6";
             label6.Size = new Size(90, 25);
             label6.TabIndex = 11;
@@ -179,17 +184,68 @@
             // lbCreateByUser
             // 
             lbCreateByUser.AutoSize = true;
-            lbCreateByUser.Location = new Point(201, 543);
+            lbCreateByUser.Location = new Point(1207, 269);
             lbCreateByUser.Name = "lbCreateByUser";
             lbCreateByUser.Size = new Size(69, 25);
             lbCreateByUser.TabIndex = 12;
             lbCreateByUser.Text = "<user>";
+            // 
+            // flpProdCategory
+            // 
+            flpProdCategory.AutoScroll = true;
+            flpProdCategory.Location = new Point(12, 9);
+            flpProdCategory.Name = "flpProdCategory";
+            flpProdCategory.Size = new Size(773, 150);
+            flpProdCategory.TabIndex = 13;
+            // 
+            // flpProd
+            // 
+            flpProd.AutoScroll = true;
+            flpProd.Location = new Point(12, 182);
+            flpProd.Name = "flpProd";
+            flpProd.Size = new Size(773, 477);
+            flpProd.TabIndex = 14;
+            // 
+            // btnReturn
+            // 
+            btnReturn.Location = new Point(1207, 398);
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(112, 34);
+            btnReturn.TabIndex = 15;
+            btnReturn.Text = "Return";
+            btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.Click += btnReturn_Click;
+            // 
+            // btnSave
+            // 
+            btnSave.Location = new Point(1207, 340);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(112, 34);
+            btnSave.TabIndex = 16;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
+            // 
+            // btnEdit
+            // 
+            btnEdit.Location = new Point(1207, 458);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(112, 34);
+            btnEdit.TabIndex = 17;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // EditTableForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1330, 686);
+            Controls.Add(btnEdit);
+            Controls.Add(btnSave);
+            Controls.Add(btnReturn);
+            Controls.Add(flpProd);
+            Controls.Add(flpProdCategory);
             Controls.Add(lbCreateByUser);
             Controls.Add(label6);
             Controls.Add(lbTimeCreate);
@@ -199,12 +255,13 @@
             Controls.Add(dgvOrder);
             Controls.Add(label3);
             Controls.Add(groupBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtName);
+            Controls.Add(txtBxID);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "EditTableForm";
             Text = "EditTableForm";
+            Activated += EditTableForm_Activated;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvOrder).EndInit();
@@ -216,8 +273,8 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtBxID;
+        private TextBox txtName;
         private GroupBox groupBox1;
         private Label label3;
         private RadioButton radFalse;
@@ -229,5 +286,10 @@
         private Label lbTimeCreate;
         private Label label6;
         private Label lbCreateByUser;
+        private FlowLayoutPanel flpProdCategory;
+        private FlowLayoutPanel flpProd;
+        private Button btnReturn;
+        private Button btnSave;
+        private Button btnEdit;
     }
 }

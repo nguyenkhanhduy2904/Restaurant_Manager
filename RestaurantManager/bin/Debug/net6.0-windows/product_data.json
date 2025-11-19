@@ -4,18 +4,98 @@
     "ProductName": "Milo",
     "Price": 40000,
     "Category": {
+      "CategoryID": "09312",
+      "CategoryName": "Milk"
+    },
+    "IsAvailable": true
+  },
+  {
+    "ProductID": "00002",
+    "ProductName": "333 Beer",
+    "Price": 36000,
+    "Category": {
       "CategoryID": "0000",
       "CategoryName": "Uncategorized"
     },
-    "IsAvailable": false
+    "IsAvailable": true
   },
   {
-    "ProductID": "0001",
-    "ProductName": "333",
-    "Price": 36000,
+    "ProductID": "00003",
+    "ProductName": "Coca Cola",
+    "Price": 15000,
     "Category": {
-      "CategoryID": "0003",
-      "CategoryName": "Alcohol"
+      "CategoryID": "100921",
+      "CategoryName": "Soda"
+    },
+    "IsAvailable": true
+  },
+  {
+    "ProductID": "00004",
+    "ProductName": "Sprite",
+    "Price": 15000,
+    "Category": {
+      "CategoryID": "100921",
+      "CategoryName": "Soda"
+    },
+    "IsAvailable": true
+  },
+  {
+    "ProductID": "00005",
+    "ProductName": "Ca Phe Sua",
+    "Price": 25000,
+    "Category": {
+      "CategoryID": "09921",
+      "CategoryName": "Coffee"
+    },
+    "IsAvailable": true
+  },
+  {
+    "ProductID": "00006",
+    "ProductName": "Ca Phe Den",
+    "Price": 20000,
+    "Category": {
+      "CategoryID": "09921",
+      "CategoryName": "Coffee"
+    },
+    "IsAvailable": true
+  },
+  {
+    "ProductID": "00007",
+    "ProductName": "Orange Juice",
+    "Price": 30000,
+    "Category": {
+      "CategoryID": "00921",
+      "CategoryName": "Juice"
+    },
+    "IsAvailable": true
+  },
+  {
+    "ProductID": "00008",
+    "ProductName": "Chocolate Ice Cream",
+    "Price": 28000,
+    "Category": {
+      "CategoryID": "012",
+      "CategoryName": "Ice Cream"
+    },
+    "IsAvailable": true
+  },
+  {
+    "ProductID": "00009",
+    "ProductName": "Pho Bo",
+    "Price": 55000,
+    "Category": {
+      "CategoryID": "2132d",
+      "CategoryName": "Pho"
+    },
+    "IsAvailable": true
+  },
+  {
+    "ProductID": "00010",
+    "ProductName": "Com Rang Trung",
+    "Price": 45000,
+    "Category": {
+      "CategoryID": "092121",
+      "CategoryName": "Fried Rice"
     },
     "IsAvailable": true
   }

@@ -1,4 +1,5 @@
 ﻿using RestaurantManager.Models;
+using RestaurantManager.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,16 @@ namespace RestaurantManager.Forms
             this.previousForm = previousForm;
             this.choosedTableType = tbType;
             SetupData();
+
+            //this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //this.MaximizeBox = false;
+            //this.MinimizeBox = false;
+            //this.StartPosition = FormStartPosition.CenterScreen;
+
+            //// Optional fixed size:
+            //this.Size = new Size(1366, 768);
+
+            Helper.SetFixedFormSize(this, Constant.BIG_WINDOW_WIDTH, Constant.BIG_WINDOW_HEIGHT);
         }
 
         void SetupData()
@@ -53,6 +64,22 @@ namespace RestaurantManager.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string id = txtBxID.Text;
+            string name = txtBxName.Text;
+
+            if (string.IsNullOrEmpty(id))
+            {
+                MessageBox.Show("ID cannot be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(name))
+            {
+                MessageBox.Show("Name cannot be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             if (choosedTableType == null)
             {
                 TableType tableType = new TableType(

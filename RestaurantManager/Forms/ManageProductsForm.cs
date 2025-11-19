@@ -25,6 +25,16 @@ namespace RestaurantManager.Forms
             //ProductList.InitProductListData();
             SetupControls();
             LoadAllProducts();
+
+            //this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //this.MaximizeBox = false;
+            //this.MinimizeBox = false;
+            //this.StartPosition = FormStartPosition.CenterScreen;
+
+            //// Optional fixed size:
+            //this.Size = new Size(1366, 768);
+
+            Helper.SetFixedFormSize(this, Constant.BIG_WINDOW_WIDTH, Constant.BIG_WINDOW_HEIGHT);
         }
 
         void SetupControls()
@@ -116,6 +126,17 @@ namespace RestaurantManager.Forms
                     ProductList.DeleteProduct(selectedProduct);
                     LoadAllProducts();
                 }
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            var selectedProduct = GetSelectedProduct();
+            if (selectedProduct != null)
+            {
+                EditProductForm editProductForm = new EditProductForm(selectedProduct, currentUser, this);
+                editProductForm.Show();
+                this.Hide();
             }
         }
     }

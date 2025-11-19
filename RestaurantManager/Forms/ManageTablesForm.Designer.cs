@@ -33,13 +33,14 @@
             btnReturn = new Button();
             btnDelete = new Button();
             btnEdit = new Button();
+            lbUserName = new Label();
             SuspendLayout();
             // 
             // flpTables
             // 
             flpTables.AutoScroll = true;
             flpTables.Dock = DockStyle.Bottom;
-            flpTables.Location = new Point(0, 128);
+            flpTables.Location = new Point(0, 514);
             flpTables.Name = "flpTables";
             flpTables.Size = new Size(1314, 474);
             flpTables.TabIndex = 0;
@@ -82,12 +83,23 @@
             btnEdit.TabIndex = 3;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
+            // 
+            // lbUserName
+            // 
+            lbUserName.AutoSize = true;
+            lbUserName.Location = new Point(64, 19);
+            lbUserName.Name = "lbUserName";
+            lbUserName.Size = new Size(113, 25);
+            lbUserName.TabIndex = 4;
+            lbUserName.Text = "<username>";
             // 
             // ManageTablesForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1314, 602);
+            ClientSize = new Size(1314, 988);
+            Controls.Add(lbUserName);
             Controls.Add(btnEdit);
             Controls.Add(btnDelete);
             Controls.Add(btnReturn);
@@ -97,6 +109,7 @@
             Text = "ManageTablesForm";
             Activated += ManageTablesForm_Activated;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -106,5 +119,6 @@
         private Button btnReturn;
         private Button btnDelete;
         private Button btnEdit;
+        private Label lbUserName;
     }
 }

@@ -23,6 +23,13 @@ namespace RestaurantManager.Utils
         public const string ORDER_DATA_FILE = "order_data_file.json";
 
 
+        public const int BIG_WINDOW_WIDTH = 1920;
+        public const int BIG_WINDOW_HEIGHT = 1080;
+
+        public const int SMALL_WINDOW_WIDTH = 800;
+        public const int SMALL_WINDOW_HEIGHT = 600;
+
+
         //public const string CONFIG_DATA_FILE = "config_data.json";
 
 

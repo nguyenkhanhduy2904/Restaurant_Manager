@@ -30,6 +30,8 @@
         {
             lbUserName = new Label();
             btnProfile = new Button();
+            btnOrder = new Button();
+            btnLogOut = new Button();
             SuspendLayout();
             // 
             // lbUserName
@@ -51,11 +53,33 @@
             btnProfile.UseVisualStyleBackColor = true;
             btnProfile.Click += btnProfile_Click;
             // 
+            // btnOrder
+            // 
+            btnOrder.Location = new Point(226, 184);
+            btnOrder.Name = "btnOrder";
+            btnOrder.Size = new Size(112, 34);
+            btnOrder.TabIndex = 2;
+            btnOrder.Text = "Order";
+            btnOrder.UseVisualStyleBackColor = true;
+            btnOrder.Click += btnOrder_Click;
+            // 
+            // btnLogOut
+            // 
+            btnLogOut.Location = new Point(108, 344);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(112, 34);
+            btnLogOut.TabIndex = 3;
+            btnLogOut.Text = "Log Out";
+            btnLogOut.UseVisualStyleBackColor = true;
+            btnLogOut.Click += btnLogOut_Click;
+            // 
             // StaffForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1449, 650);
+            Controls.Add(btnLogOut);
+            Controls.Add(btnOrder);
             Controls.Add(btnProfile);
             Controls.Add(lbUserName);
             Name = "StaffForm";
@@ -68,5 +92,7 @@
 
         private Label lbUserName;
         private Button btnProfile;
+        private Button btnOrder;
+        private Button btnLogOut;
     }
 }

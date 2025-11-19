@@ -6,15 +6,15 @@
     "Role": 0
   },
   {
-    "UserID": "STF001",
-    "UserName": "John Marston",
-    "Password": "1234",
-    "Role": 0
+    "UserID": "0000",
+    "UserName": "duy",
+    "Password": "1",
+    "Role": 1
   },
   {
-    "UserID": "0003",
-    "UserName": "Duy",
-    "Password": "29042004",
-    "Role": 1
+    "UserID": "00001",
+    "UserName": "duy1",
+    "Password": "1",
+    "Role": 0
   }
 ]

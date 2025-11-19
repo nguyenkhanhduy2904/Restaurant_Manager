@@ -24,6 +24,16 @@ namespace RestaurantManager.Forms
             this.previousForm = previousForm;
             SetupControls();
             LoadAllTableTypes();
+
+            //this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //this.MaximizeBox = false;
+            //this.MinimizeBox = false;
+            //this.StartPosition = FormStartPosition.CenterScreen;
+
+            //// Optional fixed size:
+            //this.Size = new Size(1366, 768);
+
+            Helper.SetFixedFormSize(this, Constant.BIG_WINDOW_WIDTH, Constant.BIG_WINDOW_HEIGHT);
         }
 
         void SetupControls()

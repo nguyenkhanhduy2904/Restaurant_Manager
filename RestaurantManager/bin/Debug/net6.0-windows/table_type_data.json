@@ -1,10 +1,22 @@
 [
   {
     "TypeID": "0000",
-    "TypeName": "Default Type"
+    "TypeName": "Default"
   },
   {
-    "TypeID": "000121",
+    "TypeID": "00001",
     "TypeName": "VIP"
+  },
+  {
+    "TypeID": "0002",
+    "TypeName": "Balcony"
+  },
+  {
+    "TypeID": "0003",
+    "TypeName": "Smoking-Allow"
+  },
+  {
+    "TypeID": "0004",
+    "TypeName": "2nd-Floor"
   }
 ]

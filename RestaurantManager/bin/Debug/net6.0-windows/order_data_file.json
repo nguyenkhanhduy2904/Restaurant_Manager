@@ -1,0 +1,44 @@
+[
+  {
+    "OrderID": 8,
+    "TableID": 7,
+    "CreateAt": "2025-11-19T20:00:23.0477401+07:00",
+    "Items": [
+      {
+        "ProductID": "00010",
+        "ProductName": "Com Rang Trung",
+        "Quantity": 2,
+        "UnitPrice": 45000
+      }
+    ],
+    "IsPaid": false,
+    "OrderedByUserID": "ADM001"
+  },
+  {
+    "OrderID": 9,
+    "TableID": 8,
+    "CreateAt": "2025-11-19T20:21:35.0853099+07:00",
+    "Items": [
+      {
+        "ProductID": "00002",
+        "ProductName": "333 Beer",
+        "Quantity": 1,
+        "UnitPrice": 36000
+      },
+      {
+        "ProductID": "00003",
+        "ProductName": "Coca Cola",
+        "Quantity": 1,
+        "UnitPrice": 15000
+      },
+      {
+        "ProductID": "00004",
+        "ProductName": "Sprite",
+        "Quantity": 1,
+        "UnitPrice": 15000
+      }
+    ],
+    "IsPaid": false,
+    "OrderedByUserID": "0003"
+  }
+]

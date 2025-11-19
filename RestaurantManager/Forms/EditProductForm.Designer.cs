@@ -169,6 +169,7 @@
             btnReturn.TabIndex = 11;
             btnReturn.Text = "Return";
             btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.Click += btnReturn_Click;
             // 
             // btnSave
             // 

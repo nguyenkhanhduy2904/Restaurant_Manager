@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RestaurantManager.Models;
+using RestaurantManager.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RestaurantManager.Models;
 
 namespace RestaurantManager.Forms
 {
@@ -23,6 +24,28 @@ namespace RestaurantManager.Forms
             this.currentUser = currentUser;
             this.previousForm = previousForm;
             LoadTableButtons();
+            SetupControls();
+
+            //this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //this.MaximizeBox = false;
+            //this.MinimizeBox = false;
+            //this.StartPosition = FormStartPosition.CenterScreen;
+
+            //// Optional fixed size:
+            //this.Size = new Size(1366, 768);
+
+            Helper.SetFixedFormSize(this, Constant.BIG_WINDOW_WIDTH, Constant.BIG_WINDOW_HEIGHT);
+        }
+
+        void SetupControls()
+        {
+            lbUserName.Text = $"{currentUser.UserName}!";
+            if (currentUser.Role == UserRole.Staff)
+            {
+                btnCreate.Enabled = false;
+                btnDelete.Enabled = false;
+
+            }
         }
 
         private void LoadTableButtons()
@@ -94,13 +117,13 @@ namespace RestaurantManager.Forms
         {
             if (selectedTable == null)
             {
-                MessageBox.Show("No table selected, please choose a table","Error", MessageBoxButtons.OK);
+                MessageBox.Show("No table selected, please choose a table", "Error", MessageBoxButtons.OK);
                 return;
 
             }
             if (selectedTable.IsOccupied)
             {
-                MessageBox.Show("This table are currently been ocupied. Cannot delete","Error", MessageBoxButtons.OK);
+                MessageBox.Show("This table are currently been ocupied. Cannot delete", "Error", MessageBoxButtons.OK);
                 return;
 
             }
@@ -112,7 +135,20 @@ namespace RestaurantManager.Forms
                 LoadTableButtons(); // refresh the buttons
                 return;
             }
-            
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (selectedTable == null)
+            {
+                MessageBox.Show("No table selected, please choose a table", "Error", MessageBoxButtons.OK);
+                return;
+
+            }
+            EditTableForm editTableForm = new EditTableForm(selectedTable, this, currentUser);
+            editTableForm.Show();
+            this.Hide();
         }
     }
 }

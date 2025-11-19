@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RestaurantManager.Models;
+using RestaurantManager.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RestaurantManager.Models;
 
 namespace RestaurantManager.Forms
 {
@@ -18,8 +19,18 @@ namespace RestaurantManager.Forms
         public SignInForm()
         {
             InitializeComponent();
-           
-           
+
+            //this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //this.MaximizeBox = false;
+            //this.MinimizeBox = false;
+            //this.StartPosition = FormStartPosition.CenterScreen;
+
+            //// Optional fixed size:
+            //this.Size = new Size(1366, 768);
+
+            Helper.SetFixedFormSize(this, Constant.BIG_WINDOW_WIDTH, Constant.BIG_WINDOW_HEIGHT);
+
+
         }
 
 
@@ -67,7 +78,7 @@ namespace RestaurantManager.Forms
                     }
                     else if (user.Role == UserRole.Staff) 
                     {
-                        StaffForm staffForm = new StaffForm(user);
+                        StaffForm staffForm = new StaffForm(user, this);
                         staffForm.Show();
                         
 

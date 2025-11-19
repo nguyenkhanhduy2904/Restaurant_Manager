@@ -13,9 +13,9 @@ namespace RestaurantManager.Models
         private string tableName;
         private TableType tableType;
         private bool isOccupied;
-        private string? currentOrderID;
+        private int? currentOrderID;
 
-        public Table(int tableID, string? tableName, TableType tableType, bool isOccupied, string? currentOrderID)
+        public Table(int tableID, string? tableName, TableType tableType, bool isOccupied, int? currentOrderID)
         {
             this.tableID = tableID;
             TableName = string.IsNullOrWhiteSpace(tableName)
@@ -30,7 +30,7 @@ namespace RestaurantManager.Models
         public string TableName { get => tableName; set => tableName = value; }
         public TableType TableType { get => tableType; set => tableType = value; }
         public bool IsOccupied { get => isOccupied; set => isOccupied = value; }
-        public string? CurrentOrderID { get => currentOrderID; set => currentOrderID = value; }
+        public int? CurrentOrderID { get => currentOrderID; set => currentOrderID = value; }
 
     }
 

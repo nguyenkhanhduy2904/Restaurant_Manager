@@ -15,9 +15,13 @@ namespace RestaurantManager
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             UserList.InitUserListData();
-            TableIDStorage.Load();
+            TableTypeList.InitTableTypeListData();
+            ProductCategoryList.InitCategoryListData();
+            ProductList.InitProductListData();
+            IDStorage.Load();
             TableList.InitTableListData();
-          
+            OrderList.InitDataList();
+
             Application.Run(new SignInForm());
         }
     }

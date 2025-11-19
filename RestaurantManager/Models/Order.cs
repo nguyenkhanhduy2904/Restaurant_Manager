@@ -19,7 +19,22 @@ namespace RestaurantManager.Models
         public int OrderID { get => orderID; set => orderID = value; }
         public int TableID { get => tableID; set => tableID = value; }
         public DateTime CreateAt { get => createAt; set => createAt = value; }
-        public List<OrderItem> Items { get => items; set => items = value; }
+        public List<OrderItem> Items { get => items;
+            
+            
+            set {
+
+                if (value == null)
+                {
+                    items = new List<OrderItem>();
+                }
+                else
+                {
+                    // Remove zero-quantity items automatically
+                    items = value.Where(i => i.Quantity > 0).ToList();
+                }
+            } 
+        }
         public bool IsPaid { get => isPaid; set => isPaid = value; }
         public string OrderedByUserID { get => orderedByUserID; set => orderedByUserID = value; }
 
@@ -87,6 +102,7 @@ namespace RestaurantManager.Models
 
         public static Order GetOrderByID(int id)
         {
+            if (id == -1) return null;
             foreach (var order in Orders)
             {
                 if (order.OrderID == id)

@@ -105,7 +105,23 @@ namespace RestaurantManager.Models
         {
             try
             {
-                TableTypes.Remove(tbType);
+                var existingType = GetTableTypeByID(tbType.TypeID);
+                if (existingType == null)
+                {
+                    MessageBox.Show($"Table Type ID {tbType.TypeID} does not exist.", "Error", MessageBoxButtons.OK);
+                    return false;
+                }
+                foreach (var tb in TableList.Tables)
+                {
+                    if (tb.TableType.TypeID == tbType.TypeID )
+                    {
+                        tb.TableType = TableTypeList.GetTableTypeByID(Constant.TABLE_TYPE_DEFAULT_ID);
+                    }
+
+                }
+
+                TableTypes.Remove(existingType);
+
                 FileUtils.SaveToJson(Constant.TABLE_TYPE_DATA_FILE, TableTypes);
                 return true;
             }
