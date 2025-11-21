@@ -19,6 +19,8 @@ namespace RestaurantManager.Forms
         public SignInForm()
         {
             InitializeComponent();
+            lbClock.Text = DateTime.Now.ToString("HH:mm:ss");
+            lbCalendar.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy");
 
             //this.FormBorderStyle = FormBorderStyle.FixedSingle;
             //this.MaximizeBox = false;
@@ -71,16 +73,16 @@ namespace RestaurantManager.Forms
 
                     if (user.Role == UserRole.Admin)
                     {
-                        AdminForm adminForm = new AdminForm(user,this);
+                        AdminForm adminForm = new AdminForm(user, this);
                         adminForm.Show();
-                        
+
 
                     }
-                    else if (user.Role == UserRole.Staff) 
+                    else if (user.Role == UserRole.Staff)
                     {
                         StaffForm staffForm = new StaffForm(user, this);
                         staffForm.Show();
-                        
+
 
                     }
                     txtBxUserName.Text = "";
@@ -88,13 +90,20 @@ namespace RestaurantManager.Forms
                     this.Hide();
                     return;
                 }
-                
+
             }
             MessageBox.Show("Wrong username or password.", "Authentication Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
 
 
 
+
+        }
+
+        private void timerClock_Tick(object sender, EventArgs e)
+        {
+            lbClock.Text = DateTime.Now.ToString("HH:mm:ss");
+            lbCalendar.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy");
 
         }
     }

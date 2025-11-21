@@ -22,7 +22,8 @@ namespace RestaurantManager.Models
         public List<OrderItem> Items { get => items;
             
             
-            set {
+            set 
+            {
 
                 if (value == null)
                 {
@@ -175,6 +176,45 @@ namespace RestaurantManager.Models
                 return false;
             }
         }
+
+        public static int GetTotalPriceOfOrder(int id)
+        {
+            int total = 0;
+            foreach (var order in OrderList.Orders)
+            {
+                if (order.OrderID == id)
+                {
+                    foreach (var item in order.Items)
+                    {
+                        total += item.Quantity * item.UnitPrice;
+                    }
+                }
+            }
+            return total;
+        }
+        public static int GetTotalRevenueFromTo(DateTime from, DateTime to)
+        {
+            int total = 0;
+
+            foreach (var order in Orders)
+            {
+                if (order.IsPaid && order.CreateAt >= from && order.CreateAt <= to)
+                {
+                    foreach (var item in order.Items)
+                    {
+                        total += item.Quantity * item.UnitPrice;
+                    }
+                }
+            }
+
+            return total;
+        }
+
+
+       
+
+        
+       
 
 
     }

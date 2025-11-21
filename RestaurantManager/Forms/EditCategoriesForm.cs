@@ -39,7 +39,8 @@ namespace RestaurantManager.Forms
 
         void SetupData()
         {
-           
+            lbUserName.Text = $"{currentUser.UserName}!";
+
             if (choosedCategory !=null)
             {
                 txtBxID.Text = choosedCategory.CategoryID;
@@ -58,10 +59,21 @@ namespace RestaurantManager.Forms
         {
             if (choosedCategory == null)
             {
+                string id = txtBxID.Text;
+                string name = txtBxName.Text;
+                if (string.IsNullOrEmpty(id))
+                {
+                    MessageBox.Show("ID cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrEmpty(name))
+                {
+                    MessageBox.Show("Name cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 ProductCategory productCategory = new ProductCategory(
-
-                txtBxID.Text,
-                txtBxName.Text
+                    id,
+                    name
                 );
                 if (ProductCategoryList.AddCategory(productCategory))
                 {

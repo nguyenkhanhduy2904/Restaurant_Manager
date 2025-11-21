@@ -50,5 +50,25 @@
   {
     "CategoryID": "12123ed",
     "CategoryName": "Bun"
+  },
+  {
+    "CategoryID": "29031",
+    "CategoryName": "Italian Coffee"
+  },
+  {
+    "CategoryID": "544212",
+    "CategoryName": "Cocktail"
+  },
+  {
+    "CategoryID": "651221fss",
+    "CategoryName": "Steak"
+  },
+  {
+    "CategoryID": "1232dsaaw",
+    "CategoryName": "Spagetti"
+  },
+  {
+    "CategoryID": "1s11232",
+    "CategoryName": "Sea Foods"
   }
 ]

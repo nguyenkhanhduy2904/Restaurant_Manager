@@ -47,7 +47,8 @@ namespace RestaurantManager.Forms
 
         void LoadUserData()
         {
-            if(choosedUser == null)
+            lbUserName.Text = $"{currentUser.UserName}!";
+            if (choosedUser == null)
             {
                 txtBxID.Text = "";
               

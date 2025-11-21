@@ -42,7 +42,7 @@ namespace RestaurantManager.Forms
         {
             TableTypeList.InitTableTypeListData();
 
-
+            lbUserName.Text = $"{currentUser.UserName}!";
             txtBxAmount.Text = "";
             cbxType.DataSource = TableTypeList.TableTypes;
             cbxType.DisplayMember = "TypeName";

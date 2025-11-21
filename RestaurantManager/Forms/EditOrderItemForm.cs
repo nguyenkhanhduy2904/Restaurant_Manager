@@ -38,6 +38,7 @@ namespace RestaurantManager.Forms
 
         void SetupData()
         {
+            lbUserName.Text = $"{currentUser.UserName}!";
             if (choosedOrderItem != null)
             {
                 txtBxID.Text = choosedOrderItem.ProductID.ToString();

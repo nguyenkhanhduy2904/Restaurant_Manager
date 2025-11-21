@@ -55,8 +55,8 @@ namespace RestaurantManager.Forms
             foreach (var table in TableList.Tables)
             {
                 Button btn = new Button();
-                btn.Width = 100;
-                btn.Height = 50;
+                btn.Width = 200;
+                btn.Height = 150;
                 btn.Text = $"{table.TableName}\n{(table.IsOccupied ? "Occupied" : "Free")}";
                 btn.BackColor = table.IsOccupied ? Color.Red : Color.Green;
                 btn.Tag = table; // store the table object

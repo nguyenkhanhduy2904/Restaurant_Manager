@@ -28,92 +28,202 @@ namespace RestaurantManager.Forms
             SetupData();
             LoadAllCategories();
 
-            //this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            //this.MaximizeBox = false;
-            //this.MinimizeBox = false;
-            //this.StartPosition = FormStartPosition.CenterScreen;
-
-            //// Optional fixed size:
-            //this.Size = new Size(1366, 768);
+           
 
             Helper.SetFixedFormSize(this, Constant.BIG_WINDOW_WIDTH, Constant.BIG_WINDOW_HEIGHT);
         }
-
         void SetupData()
         {
+            dgvOrder.AutoGenerateColumns = false;
             if (choosedTable == null)
                 return;
 
-            txtBxOrderID.Text = choosedTable.CurrentOrderID.ToString();
-
+            txtBxOrderID.Text = choosedTable.CurrentOrderID?.ToString() ?? "";
 
             txtBxID.Text = choosedTable.TableID.ToString();
             txtBxID.Enabled = false;
             txtName.Text = choosedTable.TableName;
-            if (choosedTable.IsOccupied)
-            {
-                radTrue.Checked = true;
-                radFalse.Checked = false;
-            }
-            else
-            {
-                radTrue.Checked = false;
-                radFalse.Checked = true;
-            }
+
+            radTrue.Checked = choosedTable.IsOccupied;
+            radFalse.Checked = !choosedTable.IsOccupied;
+
             currentOrderID = choosedTable.CurrentOrderID ?? -1;
 
-            //if (int.TryParse(choosedTable.CurrentOrderID, out currentOrderID))
-            //{
-            thisOrder = OrderList.GetOrderByID(currentOrderID);
-            if (thisOrder != null)
+            // Load the order only if it exists and is unpaid
+            thisOrder = null;
+            if (choosedTable.CurrentOrderID.HasValue)
             {
-                lbTimeCreate.Text = thisOrder.CreateAt.ToString();
-                string? userName = UserList.GetUserByID(thisOrder.OrderedByUserID)?.UserName;
-                if (userName!=null)
+                var order = OrderList.GetOrderByID(currentOrderID);
+                if (order != null && !order.IsPaid)
                 {
-                    lbCreateByUser.Text = userName;
+                    thisOrder = order;
+
+                    lbTimeCreate.Text = thisOrder.CreateAt.ToString();
+                    string? userName = UserList.GetUserByID(thisOrder.OrderedByUserID)?.UserName;
+                    lbCreateByUser.Text = userName ?? "Unknown";
+
+                    if (thisOrder.Items == null)
+                        thisOrder.Items = new List<OrderItem>();
+
+                    dgvOrder.DataSource = null;
+                    SetupOrderColumns();
+                    dgvOrder.DataSource = thisOrder.Items;
+
+                    lbTotalPrice.Text = OrderList.GetTotalPriceOfOrder(thisOrder.OrderID).ToString();
                 }
                 else
                 {
-                    lbCreateByUser.Text = "Unknown";
+                    // Paid order → treat as null
+                    choosedTable.CurrentOrderID = null;
+                    dgvOrder.DataSource = null;
+                    lbTimeCreate.Text = "";
+                    lbCreateByUser.Text = "";
+                    lbTotalPrice.Text = "";
+                    btnPaid.Visible = false ;
                 }
-
-
-
-                if (thisOrder.Items == null)
-                {
-                    thisOrder.Items = new List<OrderItem>();
-                }
-                dgvOrder.DataSource = null;
-                dgvOrder.DataSource = thisOrder.Items;
-
-
             }
             else
             {
+                // No current order
                 dgvOrder.DataSource = null;
+                lbTimeCreate.Text = "";
+                lbCreateByUser.Text = "";
+                lbTotalPrice.Text = "";
             }
 
-
-            //}
-            //else
-            //{
-            //    dgvOrder.DataSource = null;
-
-            //}
-
+            // Disable editing for staff
             if (currentUser.Role == UserRole.Staff)
             {
-                txtBxID.Enabled = false;
                 txtName.Enabled = false;
                 radTrue.Enabled = false;
                 radFalse.Enabled = false;
-
             }
+        }
+
+        void SetupOrderColumns()
+        {
+            dgvOrder.Columns.Clear();
+
+            //// Product ID column
+            //var colProductID = new DataGridViewTextBoxColumn();
+            //colProductID.HeaderText = "Product ID";
+            //colProductID.DataPropertyName = "ProductID"; // must match OrderItem property
+            //colProductID.Width = 100;
+            //colProductID.ReadOnly = true;
+            //dgvOrder.Columns.Add(colProductID);
+
+            // Product name column
+            var colProductName = new DataGridViewTextBoxColumn();
+            colProductName.HeaderText = "Product Name";
+            colProductName.DataPropertyName = "ProductName";
+            colProductName.Width = 200;
+            colProductName.ReadOnly = true;
+            dgvOrder.Columns.Add(colProductName);
+
+
+            // Quantity column
+            var colQty = new DataGridViewTextBoxColumn();
+            colQty.HeaderText = "Quantity";
+            colQty.DataPropertyName = "Quantity";
+            colQty.Width = 100;
+            dgvOrder.Columns.Add(colQty);
+
+            //Price column
+            var colPrice = new DataGridViewTextBoxColumn();
+            colPrice.HeaderText = "Price";
+            colPrice.DataPropertyName = "SumPrice";
+            colPrice.Width = 100;
+            colPrice.ReadOnly = true;
+            dgvOrder.Columns.Add(colPrice);
 
 
 
         }
+
+
+        //void SetupData()
+        //{
+        //    if (choosedTable == null)
+        //        return;
+
+        //    txtBxOrderID.Text = choosedTable.CurrentOrderID.ToString();
+
+
+        //    txtBxID.Text = choosedTable.TableID.ToString();
+        //    txtBxID.Enabled = false;
+        //    txtName.Text = choosedTable.TableName;
+        //    if (choosedTable.IsOccupied)
+        //    {
+        //        radTrue.Checked = true;
+        //        radFalse.Checked = false;
+        //    }
+        //    else
+        //    {
+        //        radTrue.Checked = false;
+        //        radFalse.Checked = true;
+        //    }
+        //    currentOrderID = choosedTable.CurrentOrderID ?? -1;
+
+        //    //if (int.TryParse(choosedTable.CurrentOrderID, out currentOrderID))
+        //    //{
+        //    thisOrder = OrderList.GetOrderByID(currentOrderID);
+
+        //    if (thisOrder != null && !thisOrder.IsPaid)
+        //    {
+        //        lbTimeCreate.Text = thisOrder.CreateAt.ToString();
+        //        string? userName = UserList.GetUserByID(thisOrder.OrderedByUserID)?.UserName;
+        //        if (userName != null)
+        //        {
+        //            lbCreateByUser.Text = userName;
+        //        }
+        //        else
+        //        {
+        //            lbCreateByUser.Text = "Unknown";
+        //        }
+
+
+
+        //        if (thisOrder.Items == null)
+        //        {
+        //            thisOrder.Items = new List<OrderItem>();
+        //        }
+        //        dgvOrder.DataSource = null;
+
+
+
+
+        //    }
+        //    else
+        //    {
+        //        thisOrder = null;
+        //        dgvOrder.DataSource = null;
+        //    }
+
+
+        //    //}
+        //    //else
+        //    //{
+        //    //    dgvOrder.DataSource = null;
+
+        //    //}
+
+        //    if (currentUser.Role == UserRole.Staff)
+        //    {
+        //        txtBxID.Enabled = false;
+        //        txtName.Enabled = false;
+        //        radTrue.Enabled = false;
+        //        radFalse.Enabled = false;
+
+        //    }
+
+
+        //    if (thisOrder != null && !thisOrder.IsPaid)
+        //    {
+        //        lbTotalPrice.Text = OrderList.GetTotalPriceOfOrder(thisOrder.OrderID).ToString();
+        //    }
+
+
+        //}
 
         void LoadAllCategories()
         {
@@ -204,6 +314,7 @@ namespace RestaurantManager.Forms
 
 
             dgvOrder.DataSource = null;
+            SetupOrderColumns();
             dgvOrder.DataSource = thisOrder.Items;
 
 
@@ -268,6 +379,19 @@ namespace RestaurantManager.Forms
         private void EditTableForm_Activated(object sender, EventArgs e)
         {
             SetupData();
+        }
+
+        private void btnPaid_Click(object sender, EventArgs e)
+        {
+            thisOrder = OrderList.GetOrderByID(currentOrderID);
+            if (thisOrder == null)
+            {
+                MessageBox.Show("No current order to pay.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            thisOrder.IsPaid = true;
+            OrderList.UpdateOrder(thisOrder);
+            dgvOrder.DataSource = null;
         }
     }
 

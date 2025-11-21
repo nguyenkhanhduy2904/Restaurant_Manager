@@ -12,13 +12,13 @@ namespace RestaurantManager.Models
     {
         private string productID;
         private string productName;
-        private decimal price;
+        private int price;
         private bool isAvailable;
 
         private ProductCategory category;
 
 
-        public Product(string productID, string productName, decimal price, ProductCategory? category, bool isAvailable)
+        public Product(string productID, string productName, int price, ProductCategory? category, bool isAvailable)
         {
             this.productID = productID;
             this.productName = productName;
@@ -29,7 +29,7 @@ namespace RestaurantManager.Models
 
         public string ProductID { get => productID; set => productID = value; }
         public string ProductName { get => productName; set => productName = value; }
-        public decimal Price { get => price; set => price = value; }
+        public int Price { get => price; set => price = value; }
         public ProductCategory Category { get => category; set => category = value ; }
         public bool IsAvailable { get => isAvailable; set => isAvailable = value; }
 
@@ -172,6 +172,36 @@ namespace RestaurantManager.Models
             }
 
         }
+
+
+        public static Dictionary<string, int> GetBestSellingList(DateTime from, DateTime to)
+        {
+            Dictionary<string, int> bestSelling = new Dictionary<string, int>();
+            foreach (var order in OrderList.Orders)
+            {
+                if (order.IsPaid && order.CreateAt >= from && order.CreateAt <= to)
+                {
+                    foreach (var item in order.Items)
+                    {
+                        if (bestSelling.ContainsKey(item.ProductID))
+                        {
+                            bestSelling[item.ProductID] += item.Quantity;
+                        }
+                        else
+                        {
+                            bestSelling.Add(item.ProductID, item.Quantity);
+                        }
+                    }
+                }
+            }
+            return bestSelling
+                   .OrderByDescending(x => x.Value)
+                   .ToDictionary(x => x.Key, x => x.Value);
+
+        }
+
+
+
 
 
 

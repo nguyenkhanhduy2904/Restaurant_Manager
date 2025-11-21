@@ -68,8 +68,8 @@ namespace RestaurantManager.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            decimal price;
-            if (!decimal.TryParse(txtBxPrice.Text, out price))
+            int price;
+            if (!int.TryParse(txtBxPrice.Text, out price))
             {
                 MessageBox.Show("Please enter a valid price.", "Error", MessageBoxButtons.OK);
                 return;

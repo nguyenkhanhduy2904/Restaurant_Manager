@@ -109,7 +109,7 @@ namespace RestaurantManager.Forms
                 {
                     ProductCategoryList.DeleteCategory(selectedCategory);
                     LoadAllCategories();
-                    
+
                 }
 
             }

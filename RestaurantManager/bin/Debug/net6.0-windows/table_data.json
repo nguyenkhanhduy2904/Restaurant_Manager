@@ -7,7 +7,7 @@
       "TypeName": "Default Type"
     },
     "IsOccupied": true,
-    "CurrentOrderID": 8
+    "CurrentOrderID": 11
   },
   {
     "TableID": 8,
@@ -17,7 +17,7 @@
       "TypeName": "Default Type"
     },
     "IsOccupied": true,
-    "CurrentOrderID": 9
+    "CurrentOrderID": null
   },
   {
     "TableID": 9,
@@ -35,6 +35,316 @@
     "TableType": {
       "TypeID": "00001",
       "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 11,
+    "TableName": "11",
+    "TableType": {
+      "TypeID": "0002",
+      "TypeName": "Balcony"
+    },
+    "IsOccupied": true,
+    "CurrentOrderID": 18
+  },
+  {
+    "TableID": 12,
+    "TableName": "12",
+    "TableType": {
+      "TypeID": "00001",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 13,
+    "TableName": "13",
+    "TableType": {
+      "TypeID": "00001",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 14,
+    "TableName": "14",
+    "TableType": {
+      "TypeID": "00001",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 15,
+    "TableName": "15",
+    "TableType": {
+      "TypeID": "00001",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 16,
+    "TableName": "16",
+    "TableType": {
+      "TypeID": "00001",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 17,
+    "TableName": "17",
+    "TableType": {
+      "TypeID": "00001",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 18,
+    "TableName": "18",
+    "TableType": {
+      "TypeID": "00001",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 19,
+    "TableName": "19",
+    "TableType": {
+      "TypeID": "00001",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 20,
+    "TableName": "20",
+    "TableType": {
+      "TypeID": "00001",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 21,
+    "TableName": "21",
+    "TableType": {
+      "TypeID": "00001",
+      "TypeName": "VIP"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 22,
+    "TableName": "22",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 23,
+    "TableName": "23",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 24,
+    "TableName": "24",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 25,
+    "TableName": "25",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 26,
+    "TableName": "26",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 27,
+    "TableName": "27",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 28,
+    "TableName": "28",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 29,
+    "TableName": "29",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 30,
+    "TableName": "30",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 31,
+    "TableName": "31",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 32,
+    "TableName": "32",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 33,
+    "TableName": "33",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 34,
+    "TableName": "34",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 35,
+    "TableName": "35",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 36,
+    "TableName": "36",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 37,
+    "TableName": "37",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 38,
+    "TableName": "38",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 39,
+    "TableName": "39",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 40,
+    "TableName": "40",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
+    },
+    "IsOccupied": false,
+    "CurrentOrderID": null
+  },
+  {
+    "TableID": 41,
+    "TableName": "41",
+    "TableType": {
+      "TypeID": "0003",
+      "TypeName": "Smoking-Allow"
     },
     "IsOccupied": false,
     "CurrentOrderID": null

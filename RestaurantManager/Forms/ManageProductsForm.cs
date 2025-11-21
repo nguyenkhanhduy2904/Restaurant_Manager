@@ -139,5 +139,10 @@ namespace RestaurantManager.Forms
                 this.Hide();
             }
         }
+
+        //private void btnDisable_Click(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }

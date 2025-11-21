@@ -5,13 +5,28 @@
     "CreateAt": "2025-11-19T20:00:23.0477401+07:00",
     "Items": [
       {
+        "SumPrice": 90000,
         "ProductID": "00010",
         "ProductName": "Com Rang Trung",
         "Quantity": 2,
         "UnitPrice": 45000
+      },
+      {
+        "SumPrice": 110000,
+        "ProductID": "00009",
+        "ProductName": "Pho Bo",
+        "Quantity": 2,
+        "UnitPrice": 55000
+      },
+      {
+        "SumPrice": 40000,
+        "ProductID": "00001",
+        "ProductName": "Milo",
+        "Quantity": 1,
+        "UnitPrice": 40000
       }
     ],
-    "IsPaid": false,
+    "IsPaid": true,
     "OrderedByUserID": "ADM001"
   },
   {
@@ -20,25 +35,207 @@
     "CreateAt": "2025-11-19T20:21:35.0853099+07:00",
     "Items": [
       {
+        "SumPrice": 36000,
         "ProductID": "00002",
         "ProductName": "333 Beer",
         "Quantity": 1,
         "UnitPrice": 36000
       },
       {
+        "SumPrice": 15000,
         "ProductID": "00003",
         "ProductName": "Coca Cola",
         "Quantity": 1,
         "UnitPrice": 15000
       },
       {
+        "SumPrice": 15000,
         "ProductID": "00004",
         "ProductName": "Sprite",
         "Quantity": 1,
         "UnitPrice": 15000
       }
     ],
-    "IsPaid": false,
+    "IsPaid": true,
     "OrderedByUserID": "0003"
+  },
+  {
+    "OrderID": 10,
+    "TableID": 8,
+    "CreateAt": "2025-11-20T23:42:48.4142461+07:00",
+    "Items": [
+      {
+        "SumPrice": 135000,
+        "ProductID": "00010",
+        "ProductName": "Com Rang Trung",
+        "Quantity": 3,
+        "UnitPrice": 45000
+      }
+    ],
+    "IsPaid": true,
+    "OrderedByUserID": "ADM001"
+  },
+  {
+    "OrderID": 11,
+    "TableID": 7,
+    "CreateAt": "2025-11-20T23:45:06.365103+07:00",
+    "Items": [
+      {
+        "SumPrice": 28000,
+        "ProductID": "00008",
+        "ProductName": "Chocolate Ice Cream",
+        "Quantity": 1,
+        "UnitPrice": 28000
+      }
+    ],
+    "IsPaid": false,
+    "OrderedByUserID": "ADM001"
+  },
+  {
+    "OrderID": 12,
+    "TableID": 11,
+    "CreateAt": "2025-11-21T20:30:52.939924+07:00",
+    "Items": [
+      {
+        "SumPrice": 165000,
+        "ProductID": "00009",
+        "ProductName": "Pho Bo",
+        "Quantity": 3,
+        "UnitPrice": 55000
+      },
+      {
+        "SumPrice": 40000,
+        "ProductID": "00001",
+        "ProductName": "Milo",
+        "Quantity": 1,
+        "UnitPrice": 40000
+      },
+      {
+        "SumPrice": 56000,
+        "ProductID": "00008",
+        "ProductName": "Chocolate Ice Cream",
+        "Quantity": 2,
+        "UnitPrice": 28000
+      }
+    ],
+    "IsPaid": true,
+    "OrderedByUserID": "ADM001"
+  },
+  {
+    "OrderID": 13,
+    "TableID": 11,
+    "CreateAt": "2025-11-21T20:32:30.1421803+07:00",
+    "Items": [
+      {
+        "SumPrice": 45000,
+        "ProductID": "00010",
+        "ProductName": "Com Rang Trung",
+        "Quantity": 1,
+        "UnitPrice": 45000
+      }
+    ],
+    "IsPaid": false,
+    "OrderedByUserID": "ADM001"
+  },
+  {
+    "OrderID": 14,
+    "TableID": 11,
+    "CreateAt": "2025-11-21T20:33:03.301721+07:00",
+    "Items": [
+      {
+        "SumPrice": 165000,
+        "ProductID": "00003",
+        "ProductName": "Coca Cola",
+        "Quantity": 11,
+        "UnitPrice": 15000
+      },
+      {
+        "SumPrice": 75000,
+        "ProductID": "00004",
+        "ProductName": "Sprite",
+        "Quantity": 5,
+        "UnitPrice": 15000
+      }
+    ],
+    "IsPaid": true,
+    "OrderedByUserID": "ADM001"
+  },
+  {
+    "OrderID": 15,
+    "TableID": 11,
+    "CreateAt": "2025-11-21T22:01:32.9061729+07:00",
+    "Items": [
+      {
+        "SumPrice": 400000,
+        "ProductID": "00001",
+        "ProductName": "Milo",
+        "Quantity": 10,
+        "UnitPrice": 40000
+      },
+      {
+        "SumPrice": 55000,
+        "ProductID": "00009",
+        "ProductName": "Pho Bo",
+        "Quantity": 1,
+        "UnitPrice": 55000
+      }
+    ],
+    "IsPaid": true,
+    "OrderedByUserID": "ADM001"
+  },
+  {
+    "OrderID": 16,
+    "TableID": 10,
+    "CreateAt": "2025-11-21T22:05:43.7931777+07:00",
+    "Items": [
+      {
+        "SumPrice": 55000,
+        "ProductID": "00009",
+        "ProductName": "Pho Bo",
+        "Quantity": 1,
+        "UnitPrice": 55000
+      }
+    ],
+    "IsPaid": false,
+    "OrderedByUserID": "ADM001"
+  },
+  {
+    "OrderID": 17,
+    "TableID": 11,
+    "CreateAt": "2025-11-21T22:37:39.3157794+07:00",
+    "Items": [
+      {
+        "SumPrice": 45000,
+        "ProductID": "00010",
+        "ProductName": "Com Rang Trung",
+        "Quantity": 1,
+        "UnitPrice": 45000
+      }
+    ],
+    "IsPaid": false,
+    "OrderedByUserID": "ADM001"
+  },
+  {
+    "OrderID": 18,
+    "TableID": 11,
+    "CreateAt": "2025-11-21T22:43:55.1450559+07:00",
+    "Items": [
+      {
+        "SumPrice": 90000,
+        "ProductID": "00010",
+        "ProductName": "Com Rang Trung",
+        "Quantity": 2,
+        "UnitPrice": 45000
+      },
+      {
+        "SumPrice": 110000,
+        "ProductID": "00009",
+        "ProductName": "Pho Bo",
+        "Quantity": 2,
+        "UnitPrice": 55000
+      }
+    ],
+    "IsPaid": false,
+    "OrderedByUserID": "ADM001"
   }
 ]

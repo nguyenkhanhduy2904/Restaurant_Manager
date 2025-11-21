@@ -11,19 +11,24 @@ namespace RestaurantManager.Models
         private string productID;
         private string productName;
         private int quantity;
-        private decimal unitPrice;
+        private int unitPrice;
+        public int SumPrice => Quantity * UnitPrice;
 
         public string ProductID { get => productID; set => productID = value; }
         public string ProductName { get => productName; set => productName = value; }
         public int Quantity { get => quantity; set => quantity = value; }
-        public decimal UnitPrice { get => unitPrice; set => unitPrice = value; }
+        public int UnitPrice { get => unitPrice; set => unitPrice = value; }
 
-        public OrderItem(string productID, string productName, int quantity, decimal unitPrice)
+        
+
+        public OrderItem(string productID, string productName, int quantity, int unitPrice)
         {
             this.productID = productID;
             this.productName = productName;
             this.quantity = quantity;
             this.unitPrice = unitPrice;
+           
+
         }
 
 

@@ -38,6 +38,7 @@ namespace RestaurantManager.Forms
 
         void SetupData()
         {
+            lbUserName.Text = $"{currentUser.UserName}!";
             if (choosedTableType != null)
             {
                 txtBxID.Text = choosedTableType.TypeID;
